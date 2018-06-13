@@ -4,6 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Chapter2/Chapter2.iml" filepath="$PROJECT_DIR$/Chapter2/Chapter2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Thread.iml" filepath="$PROJECT_DIR$/Thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter3/chapter3.iml" filepath="$PROJECT_DIR$/chapter3/chapter3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter4/chapter4.iml" filepath="$PROJECT_DIR$/chapter4/chapter4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lockMehtodTest3/lockMehtodTest3.iml" filepath="$PROJECT_DIR$/lockMehtodTest3/lockMehtodTest3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lockMethodTest1/lockMethodTest1.iml" filepath="$PROJECT_DIR$/lockMethodTest1/lockMethodTest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lockMethodTest2/lockMethodTest2.iml" filepath="$PROJECT_DIR$/lockMethodTest2/lockMethodTest2.iml" />
       <module fileurl="file://$PROJECT_DIR$/sameNum/sameNum.iml" filepath="$PROJECT_DIR$/sameNum/sameNum.iml" />
       <module fileurl="file://$PROJECT_DIR$/t4_threadsafe/t4_threadsafe.iml" filepath="$PROJECT_DIR$/t4_threadsafe/t4_threadsafe.iml" />
     </modules>
