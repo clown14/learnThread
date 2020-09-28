@@ -1,4 +1,4 @@
-package juc;
+package com.atguigu.juc;
 
 @FunctionalInterface
 interface Foo{
