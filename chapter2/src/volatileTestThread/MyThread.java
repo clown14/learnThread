@@ -1,7 +1,7 @@
 package volatileTestThread;
 
 public class MyThread extends Thread {
-    volatile public static int count;
+     public static int count;
 
     @Override
     public void run() {

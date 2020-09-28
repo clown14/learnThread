@@ -5,8 +5,8 @@ public class ThreadB extends Thread {
     public void run() {
         try {
             for (int i=0; i< 100; i++) {
-                Tools.t1.set("ThreaA " + (i + 1));
-                System.out.println("ThreadA get Value" +
+                Tools.t1.set("ThreaB " + (i + 1));
+                System.out.println("ThreadB get Value" +
                         Tools.t1.get());
                 Thread.sleep(200);
             }

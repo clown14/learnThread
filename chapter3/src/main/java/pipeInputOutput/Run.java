@@ -12,7 +12,7 @@ public class Run {
             PipedInputStream inputStream = new PipedInputStream();
             PipedOutputStream outputStream = new PipedOutputStream();
 
-            inputStream.connect(outputStream);
+           // inputStream.connect(outputStream);
             outputStream.connect(inputStream);
 
             ThreadRead threadRead = new ThreadRead(readData, inputStream);
@@ -21,7 +21,7 @@ public class Run {
             Thread.sleep(2000);
 
             ThreadWrite threadWrite = new ThreadWrite(writeData, outputStream);
-            threadRead.start();
+            threadWrite.start();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

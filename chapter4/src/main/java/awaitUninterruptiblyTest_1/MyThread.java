@@ -9,7 +9,7 @@ public class MyThread extends Thread {
     }
 
     public MyThread(Service service) {
-        super();
+            super();
         this.service = service;
     }
 }

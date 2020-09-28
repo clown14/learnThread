@@ -16,9 +16,10 @@ public class P {
                             Thread.currentThread().getName() + " WAITING了**");
                     lock.wait();
                 }
-                System.out.println("消费者" +
+                System.out.println("生产者" +
                         Thread.currentThread().getName() + " RUNNABLE了");
-                ValueObject.value = "";
+                String value = System.currentTimeMillis() + "_" + System.nanoTime();
+                ValueObject.value = value;
                 lock.notifyAll();
             }
         } catch (InterruptedException e) {

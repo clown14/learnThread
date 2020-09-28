@@ -15,7 +15,7 @@ public class Subtract {
                     System.out.println("wait begin ThreadName=" +
                             Thread.currentThread().getName());
                     lock.wait();
-                    System.out.println("wait and ThreadNmae=" +
+                    System.out.println("wait end ThreadNmae=" +
                             Thread.currentThread().getName());
                 }
                 ValueObject.list.remove(0);

@@ -3,6 +3,11 @@ package TwoThreadTransData;
 public class ThreadB extends Thread {
     private MyList list;
 
+    public ThreadB(MyList list) {
+        super();
+        this.list = list;
+    }
+
     @Override
     public void run() {
         try {
@@ -15,10 +20,5 @@ public class ThreadB extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
-
-    public ThreadB(MyList list) {
-        super();
-        this.list = list;
     }
 }

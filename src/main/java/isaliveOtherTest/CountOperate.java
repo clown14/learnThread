@@ -10,6 +10,7 @@ public class CountOperate extends Thread {
         System.out.println("this.getNmae()=" + this.getName());
         System.out.println("this.isAlive()=" + this.isAlive());
         System.out.println("CountOperate---end");
+        System.out.println("");
     }
 
     @Override

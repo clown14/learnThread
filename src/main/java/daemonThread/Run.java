@@ -11,6 +11,7 @@ public class Run {
             Thread.sleep(5000);
             System.out.println("我离开thread对象也不再打印了，也就是停止了");
         } catch (InterruptedException e) {
+            System.out.println("aaa");
             e.printStackTrace();
         }
     }

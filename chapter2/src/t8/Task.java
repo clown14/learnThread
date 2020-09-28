@@ -1,7 +1,7 @@
 package t8;
 
 public class Task {
-    public void otherMethod() {
+    synchronized public void otherMethod() {
         System.out.println("----------run--otherMethod");
     }
     public void doLongTimeTask() {

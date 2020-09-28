@@ -9,6 +9,6 @@ public class Run2 {
         MyThread2 mythread = new MyThread2();
         System.out.println("begin =" + System.currentTimeMillis());
         mythread.start();
-        System.out.println("end =" + System.currentTimeMillis());
+        System.out.println("end   =" + System.currentTimeMillis());
     }
 }

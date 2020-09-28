@@ -5,8 +5,8 @@ public class Test {
         Object lock = new Object();
         ThreadA a = new ThreadA(lock);
         a.start();
-        NotifyThread nofityThread = new NotifyThread(lock);
-        nofityThread.start();
+        NotifyThread b = new NotifyThread(lock);
+        b.start();
         synNotifyMethodThread c = new synNotifyMethodThread(lock);
         c.start();
     }

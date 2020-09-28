@@ -25,14 +25,14 @@ public class DealThread implements Runnable {
             }
         }
         if (username.equals("b")) {
-            synchronized (lock1) {
+            synchronized (lock2) {
                 try {
                     System.out.println("username= " + username);
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                synchronized (lock2) {
+                synchronized (lock1) {
                     System.out.println("按lock2->lock1代码顺序执行了");
                 }
             }

@@ -12,6 +12,7 @@ public class MyThread extends Thread {
                 Thread.sleep(1000);
             }
         } catch (InterruptedException e) {
+            System.out.println("aa");
             e.printStackTrace();
         }
     }

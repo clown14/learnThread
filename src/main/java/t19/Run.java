@@ -5,7 +5,7 @@ package t19;
  */
 public class Run {
     public static void main(String[] args) {
-        for (int i=0;i<5;i++) {
+        for (int i = 0; i < 5; i++) {
 
             MyThread1 thread1 = new MyThread1();
             thread1.setPriority(10);
