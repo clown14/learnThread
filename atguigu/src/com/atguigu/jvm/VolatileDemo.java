@@ -15,8 +15,13 @@ class MyNumber {
  * JMM = 可见性（通知机制）
  **/
 
-public class JMM {
+public class VolatileDemo {
     public static void main(String[] args) {
+        seeOkByVolatile();
+    }
+
+    //volatile可以保证可见性，及时通知其他线程，主物理内存的值已被修改
+    public static void seeOkByVolatile() {
         MyNumber myNumber = new MyNumber();
         new Thread(() -> {
             try {
