@@ -20,7 +20,7 @@ class ShareData {
                 c1.await();
             }
             //2 干活
-            for (int i = 0; i < 5; i++) {
+            for (int i = 1; i <= 5; i++) {
                 System.out.println(Thread.currentThread().getName() + "\t" + i);
             }
             //3 通知
@@ -43,7 +43,7 @@ class ShareData {
                 c2.await();
             }
             //2 干活
-            for (int i = 0; i < 10; i++) {
+            for (int i = 1; i <= 10; i++) {
                 System.out.println(Thread.currentThread().getName() + "\t" + i);
             }
             //3 通知
@@ -66,7 +66,7 @@ class ShareData {
                 c3.await();
             }
             //2 干活
-            for (int i = 0; i < 15; i++) {
+            for (int i = 1; i <= 15; i++) {
                 System.out.println(Thread.currentThread().getName() + "\t" + i);
             }
             //3 通知
