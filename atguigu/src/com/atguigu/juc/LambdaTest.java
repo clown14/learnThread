@@ -42,6 +42,7 @@ public class LambdaTest {
         };
         System.out.println(foo.plus(5, 6));
         System.out.println(foo.add(3, 4));
+        System.out.println(Foo.mul(3, 4));
     }
 }
 
