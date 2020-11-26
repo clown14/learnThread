@@ -1,9 +1,12 @@
 package com.atguigu.juc;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  * @program: Thread
@@ -13,9 +16,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * 4.1 故障现象（并发修改异常）
  *  java.util.ConcurrentModificationException
  * 4.2导致原因
- *  多线程并发，资源未加锁
+ *  多线程并发，资源未加锁（又要写，又要读）
  * 4.3解决方法
- *  1.Vector是线程安全的，加了锁
+ *  1.Vector是线程安全的，加了锁，访问性能降低，保证数据一致性
  *  2.Collections.synchronizedList(new ArrayList());
  *  3.new CopyOnWriteArrayList(); （写时复制）
  *      CopyOnWrite容器即写时复制的容器。往一个容器添加元素的时候，不直接往当前容器Object[]添加，而是先将当前容器Object[]进行Copy，
@@ -26,7 +29,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
  *  高并发下推荐使用juc里的
  * 4.5常用集合相对的安全的集合
  *  HashMap -> ConcurrentHashMap
+ *      Hash无序，初始大小16，负载因子0.75。Node节点，数组+链表
  *  HashSet -> CopyOnWriteArraySet
+ *      HashSet底层是HashMap，value是写死的object常量
  *  ArrayList -> CopyOnWriteArrayList
  **/
 
@@ -49,7 +54,7 @@ public class NotSafeDemo {
 
     public static void setNotSafe() {
         //        Set<String> set = new HashSet<>();
-        Set<String> set = new ConcurrentSkipListSet<>();
+        Set<String> set = new CopyOnWriteArraySet<>();
 
         for (int i = 1; i <= 30; i++) {
             new Thread(()->{
