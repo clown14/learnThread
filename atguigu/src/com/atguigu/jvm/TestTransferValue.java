@@ -19,6 +19,8 @@ class Person {
  * @program: Thread
  * @author: onion
  * @create: 2020-10-02 14:04
+ *
+ * main方法里str指向abc，字符串常量池里没有xxx要新建改指向。
  **/
 
 public class TestTransferValue {

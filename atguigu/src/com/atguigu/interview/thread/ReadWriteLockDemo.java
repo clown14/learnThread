@@ -62,7 +62,9 @@ class MyCache {
  * 读-写 不能共存
  * 写-写 不能共存
  *
- * 写操作： 原子+独占，整个过程必须是一个完整的统一体
+ * 写操作： 原子+独占，整个过程必须是一个完整的统一体,数据一致性
+ *
+ * ReentrantLock读读也不允许，只允许一个访问
  **/
 
 public class ReadWriteLockDemo {
