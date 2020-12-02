@@ -8,6 +8,8 @@ import java.util.concurrent.TimeUnit;
  * @program: Thread
  * @author: onion
  * @create: 2020-10-10 15:32
+ *
+ * 不需要关心什么时候需要阻塞线程，什么时候需要唤醒线程
  **/
 
 public class BlockingQueueDemo {
