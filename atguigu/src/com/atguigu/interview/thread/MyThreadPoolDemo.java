@@ -1,7 +1,5 @@
 package com.atguigu.interview.thread;
 
-import com.sun.jmx.snmp.ThreadContext;
-
 import java.util.concurrent.*;
 
 /**
@@ -14,7 +12,7 @@ import java.util.concurrent.*;
 public class MyThreadPoolDemo {
     public static void main(String[] args) {
 
-        ExecutorService threadPool=new ThreadPoolExecutor(2,5,
+        ExecutorService threadPool = new ThreadPoolExecutor(2, 5,
                 1L, TimeUnit.SECONDS,
                 new LinkedBlockingQueue<>(3),
                 Executors.defaultThreadFactory(),
@@ -24,13 +22,13 @@ public class MyThreadPoolDemo {
             //模拟10个用户来办理业务，每个用户就是一个来自外部的请求线程
             for (int i = 1; i <= 10; i++) {
                 threadPool.execute(() -> {
-                    System.out.println(Thread.currentThread().getName()+"\t 办理业务");
+                    System.out.println(Thread.currentThread().getName() + "\t 办理业务");
                 });
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             threadPool.shutdown();
         }
     }
@@ -45,13 +43,13 @@ public class MyThreadPoolDemo {
             //模拟10个用户来办理业务，每个用户就是一个来自外部的请求线程
             for (int i = 1; i <= 10; i++) {
                 threadPool.execute(() -> {
-                    System.out.println(Thread.currentThread().getName()+"\t 办理业务");
+                    System.out.println(Thread.currentThread().getName() + "\t 办理业务");
                 });
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             threadPool.shutdown();
         }
     }
