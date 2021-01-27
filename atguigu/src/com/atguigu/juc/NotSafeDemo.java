@@ -29,6 +29,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
  *      Hash无序，初始大小16，负载因子0.75。Node节点，数组+链表
  *  HashSet -> CopyOnWriteArraySet
  *      HashSet底层是HashMap，value是写死的object常量
+ *      private static final Object PRESENT = new Object();
  *  ArrayList -> CopyOnWriteArrayList
  **/
 

@@ -2,7 +2,10 @@ package com.atguigu.juc;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 /**
  * @program: Thread
@@ -12,6 +15,13 @@ import java.util.stream.Collectors;
  * Java就是sql，sql就是Java
  * Java.util.function
  * 集合讲的是数据，流讲的是计算
+ *
+ * Function,Predicate,Consumer,Supplier
+ *
+ * Stream
+ *   1）不会存储元素
+ *   2）不会改变源对象，返回一个持有结果的新Stream
+ *   3）延迟执行，等到需要结果的时候才执行
  **/
 
 class User {
@@ -83,50 +93,48 @@ public class StreamDemo {
                 .forEach(System.out::println);
 
 
-
-
         //===============================================================================
         //===============================================================================
         //===============================================================================
-        /*Function<String, Integer> function = new Function<String, Integer>() {
+        Function<String, Integer> function = new Function<String, Integer>() {
             @Override
             public Integer apply(String s) {
                 return 1024;
             }
-        };*/
+        };
 
-       /* Function<String, Integer> function = s -> {return s.length();};
-        System.out.println(function.apply("abc"));*/
+        /*Function<String, Integer> function = s -> {return s.length();};*/
+        System.out.println(function.apply("abc")+" 有参数有返回值");
 
-        /*Predicate<String> predicate = new Predicate<String>() {
+        Predicate<String> predicate = new Predicate<String>() {
             @Override
             public boolean test(String s) {
                 return false;
             }
-        };*/
+        };
 
-        /*Predicate<String> predicate = s -> s.isEmpty();
-        System.out.println(predicate.test("aaa"));*/
+        /*Predicate<String> predicate = s -> s.isEmpty();*/
+        System.out.println(predicate.test("aaa")+" 有参数，返回Boolean");
 
-       /* Consumer<String> consumer = new Consumer<String>() {
+        Consumer<String> consumer = new Consumer<String>() {
             @Override
             public void accept(String s) {
-
+                System.out.println("有参，无返回值");
             }
-        };*/
+        };
 
-        /*Consumer<String> consumer = s -> System.out.println(s);
-        consumer.accept("aaa");*/
+        /*Consumer<String> consumer = s -> System.out.println(s);*/
+        consumer.accept("aaa");
 
-        /*Supplier<String> supplier = new Supplier<String>() {
+        Supplier<String> supplier = new Supplier<String>() {
             @Override
             public String get() {
-                return null;
+                return "无参数，有返回值";
             }
-        };*/
+        };
 
-       /* Supplier<String> supplier=()->{return "java";};
-        System.out.println(supplier.get());*/
+        /*Supplier<String> supplier=()->{return "java";};*/
+        System.out.println(supplier.get());
     }
 }
 
